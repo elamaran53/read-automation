@@ -130,6 +130,12 @@ section {
     font-weight: 700;
     line-height: 1.5;
     margin-bottom: .3rem;
+    
+}
+.gradient-text{
+    -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: linear-gradient(135deg,rgb(199, 36, 36),rgb(224, 22, 147),rgb(185, 100, 255));
 }
 
 .home-content p {
@@ -370,7 +376,7 @@ span{
 .portfolio-container>.portfolio-box{
     position: relative;
     display: flex;
-    border-radius: 2rem;
+    border-radius: 5px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
 }
@@ -389,43 +395,37 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-    color: var(--white-color);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color)); */
+    /* color: var(--white-color); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     padding: 0 4rem;
-    opacity: 0;
-    transition: .5s ease;
+  
+}
+.portfolio-box>.portfolio-layer>a{
+    color:white;
+    font-size:1.5rem;
+    background-color:black;
+    padding:15px;
+    border-radius:50px;
+    opacity:0.9; 
+}
+.portfolio-box>.portfolio-layer>a:hover{
+    color:black;
+    font-size:1.5rem;
+    background-color:white;
 }
 
-.portfolio-box:hover .portfolio-layer{
-    opacity: 1;
-}
 
-.portfolio-layer>p{
-    font-size: 1.6rem;
-    margin:3rem 0 1rem;
-    line-height: 25px;
-    word-spacing: 2px;
-    letter-spacing: 0.4px;
 
-}
-.portfolio-layer>a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    background: var(--white-color);
-    border-radius: 50%;
-}
-.portfolio-layer>a>i{
-    font-size: 2rem;
-    color: #333;
-}
+
+
+
+
+
 .clients{
     margin-bottom: -23rem;
 }
@@ -575,6 +575,7 @@ color: var(--white-color);
     color: var(--text-color);
     margin-top: 2rem;
   }
+ 
 
 .footer{
     display: flex;

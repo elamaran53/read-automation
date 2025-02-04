@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READ N' ROAST</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .slice img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        
+        for (let i = 1; i <= 23; i++) {
+            let img = document.createElement("img");
+            img.src = `/ui_images/UI_${String(i).padStart(2, '0')}.jpg`; // UI_01.jpg, UI_02.jpg ... UI_23.jpg
+            img.alt = `Slice ${i}`;
+            let div = document.createElement("div");
+            div.classList.add("slice");
+            div.appendChild(img);
+            document.body.appendChild(div);
+        }
+    </script>
+
+</body>
+</html>
